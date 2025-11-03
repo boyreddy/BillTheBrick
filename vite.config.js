@@ -60,7 +60,7 @@ const manifestForPlugIn = {
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/BillTheBrick',
+  base: '/BillTheBrick/',
   plugins: [react(),tailwindcss(),
     VitePWA(manifestForPlugIn)
   ],

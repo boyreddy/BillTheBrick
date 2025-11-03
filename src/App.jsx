@@ -13,6 +13,8 @@ function App() {
   const [invoice, setInvoice] = useState(false);
   const [second, setSecond] = useState(false);
 
+  const [rate, setRate] = useState(12.5);
+
   const isLeapYear = year % 4 == 0;
 
   const lastDay =
@@ -48,7 +50,7 @@ function App() {
       />
       <DayBoard year={year} month={month} site={site} lastDay={lastDay} />
       <hr />
-      <MonthTotal year={year} month={month} site={site} />
+      <MonthTotal year={year} month={month} site={site} rate={rate} setRate={setRate} />
       <hr />
       <div className="flex justify-between mt-2 w-100 mx-auto">
         <button
@@ -75,6 +77,8 @@ function App() {
         year={year}
         site={site}
         month={month}
+        rate={rate}
+        setRate={setRate}
       />
     </div>
   );

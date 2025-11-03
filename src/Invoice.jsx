@@ -79,8 +79,8 @@
 
 import React, { useState } from "react";
 
-const Invoice = ({ site, year, month, second }) => {
-  const [rate, setRate] = useState(12.5);
+const Invoice = ({ site, year, month, second, rate, setRate }) => {
+  
 
   // Filter and sort records matching the site, year, and month
   const records = Object.keys(localStorage)
