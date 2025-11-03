@@ -1,23 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa';
-
+// you can copy the base structure of manifest object.
 const manifestForPlugIn = {
   registerType:'prompt',
-  // includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+  includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest:{
     name:"BillTheBrick",
     short_name:"BillTheBrick",
     description:"BillTheBrick",
     icons:[{
-      src: '/android-launchericon-192-192.png',
+      src: '/android-chrome-192x192.png',
       sizes:'192x192',
       type:'image/png',
       purpose:'favicon'
     },
     {
-      src:'/android-launchericon-512-512.png',
+      src:'/android-chrome-512x512.png',
       sizes:'512x512',
       type:'image/png',
       purpose:'favicon'
@@ -29,7 +25,7 @@ const manifestForPlugIn = {
       purpose:'apple touch icon',
     },
     {
-      src: '/android-launchericon-512-512.png',
+      src: '/maskable_icon.png',
       sizes:'512x512',
       type:'image/png',
       purpose:'any maskable',
@@ -43,11 +39,3 @@ const manifestForPlugIn = {
   orientation:'portrait'
   }
 }
-
-// https://vite.dev/config/
-export default defineConfig({
-  base: '/BillTheBrick',
-  plugins: [react(),tailwindcss(),
-    VitePWA(manifestForPlugIn)
-  ],
-})
