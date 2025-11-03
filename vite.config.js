@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const manifestForPlugIn = {
   registerType:'autoUpdate',
-  includeAssets:["logo.png","android-launchericon-512-512.png"],
+  includeAssets:["logo.png","android-launchericon-512-512.png","android-launchericon-192-192.png","apple-touch-icon.png"],
   manifest:{
     name:"BillTheBrick",
     short_name:"BillTheBrick",
