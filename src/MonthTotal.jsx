@@ -8,7 +8,8 @@ const MonthTotal = ({ site, year, month, rate, setRate }) => {
   // console.log('November total:', total);
 
   return (
-    <div>
+    <div className="">
+      <hr className="mt-2" />
       Total No. Of Pallets:
       <span className="font-bold">{total}</span>
       <hr />
@@ -20,6 +21,7 @@ const MonthTotal = ({ site, year, month, rate, setRate }) => {
       <hr />
       Total Bill:
       <span className="font-bold">{total * rate}</span>
+      <hr />
     </div>
   );
 };

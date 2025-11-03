@@ -1,9 +1,10 @@
 const Navbar = ({ year, site, month, setYear, setMonth, setSite }) => {
+  const sites = (localStorage.getItem('sites') || "Add New Site").split(",");
   return (
     <>
-      <h1 className="font-bold">KSR BillTheBrick</h1>
+      <h1 className="font-bold pt-3">KSR BillTheBrick</h1>
       <hr />
-      <div className="justify-between flex ">
+      <div className="justify-between flex w-100">
         <div className="flex justify-items-center bg-amber-100">
           {/* <span>Site:</span> */}
           <select
@@ -15,9 +16,14 @@ const Navbar = ({ year, site, month, setYear, setMonth, setSite }) => {
               localStorage.setItem("site", e.target.value);
             }}
           >
-            <option value="PRIMARK">PRIMARK</option>
+            {
+              sites.map((k)=>{
+                return <option value={k} key={k}>{k}</option>
+              })
+            }
+            {/* <option value="PRIMARK">PRIMARK</option>
             <option value="PATI">PATI</option>
-            <option value="KOLLUR">KOLLUR</option>
+            <option value="KOLLUR">KOLLUR</option> */}
           </select>
         </div>
         <div className="flex justify-items-center">

@@ -120,7 +120,7 @@ const Invoice = ({ site, year, month, second, rate, setRate }) => {
       : 30;
 
   return (
-    <div className="w-90 ml-26 mx-auto">
+    <div className="w-100 pt-3">
       <h1 className="font-bold" onClick={()=>window.location.reload()}>KSR Manpower Supply</h1>
       <h1>Invoice</h1>
       <h1>
