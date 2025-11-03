@@ -11,19 +11,19 @@ const manifestForPlugIn = {
     short_name:"BillTheBrick",
     description:"BillTheBrick",
     icons:[{
-      src: '/android-launchericon-192-192.png',
+      src: '/BillTheBrick/android-launchericon-192-192.png',
       sizes:'192x192',
       type:'image/png',
       purpose:'any'
     },
     {
-      src: '/apple-touch-icon.png',
+      src: '/BillTheBrick/apple-touch-icon.png',
       sizes:'192x192',
       type:'image/png',
       purpose:'any',
     },
     {
-      src: '/android-launchericon-512-512.png',
+      src: '/BillTheBrick/android-launchericon-512-512.png',
       sizes:'512x512',
       type:'image/png',
       purpose:'any maskable',
@@ -32,8 +32,8 @@ const manifestForPlugIn = {
   theme_color:'#171717',
   background_color:'#f0e7db',
   display:"standalone",
-  scope:'/',
-  start_url:"/",
+  scope:'/BillTheBrick/',
+  start_url:"/BillTheBrick/",
   orientation:'portrait'
   },
   workbox: {
