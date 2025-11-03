@@ -29,6 +29,7 @@ const Navbar = ({ year, site, month, setYear, setMonth, setSite }) => {
             onChange={(e) => {
               setYear(e.target.value);
               localStorage.setItem("year", e.target.value);
+              window.location.reload()
             }}
           >
             <option value="2025">2025</option>
@@ -47,6 +48,7 @@ const Navbar = ({ year, site, month, setYear, setMonth, setSite }) => {
             onChange={(e) => {
               setMonth(e.target.value);
               localStorage.setItem("month", e.target.value);
+              window.location.reload()
             }}
           >
             <option value="Jan">Jan</option>

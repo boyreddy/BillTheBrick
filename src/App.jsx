@@ -50,7 +50,7 @@ function App() {
       <hr />
       <MonthTotal year={year} month={month} site={site} />
       <hr />
-      <div className="flex justify-between mt-2">
+      <div className="flex justify-between mt-2 w-100 mx-auto">
         <button
           className="p-1 rounded bg-amber-200"
           onClick={() => {

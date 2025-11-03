@@ -41,7 +41,9 @@ const DayEdit = ({ isOpen, onClose, view, children }) => {
       >
         <div className="flex flex-row justify-between">
           <h1>{view}</h1>
-          <button className="bg-red-400 rounded" onClick={onClose}>
+          <button className="bg-red-400 rounded" onClick={()=>{onClose();
+            window.location.reload()
+          }}>
             Close
           </button>
         </div>

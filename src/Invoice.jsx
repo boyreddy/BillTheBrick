@@ -121,7 +121,7 @@ const Invoice = ({ site, year, month, second }) => {
 
   return (
     <div className="w-90 ml-26 mx-auto">
-      <h1 className="font-bold">KSR Manpower Supply</h1>
+      <h1 className="font-bold" onClick={()=>window.location.reload()}>KSR Manpower Supply</h1>
       <h1>Invoice</h1>
       <h1>
         {site} - {month} - {year}
