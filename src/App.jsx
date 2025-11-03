@@ -60,7 +60,7 @@ function App() {
           {second ? "16th - 31st" : "1st - 15th"}
         </button>
         <button
-          className="p-1 bg-amber-200 rounded m-1 mx-auto"
+          className="p-1 bg-amber-200 rounded mx-auto"
           onClick={() => setInvoice(true)}
         >
           View Invoice
