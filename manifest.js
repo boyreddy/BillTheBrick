@@ -7,13 +7,13 @@ const manifestForPlugIn = {
     short_name:"BillTheBrick",
     description:"BillTheBrick",
     icons:[{
-      src: '/android-chrome-192x192.png',
+      src: '/android-launchericon-192-192.png',
       sizes:'192x192',
       type:'image/png',
       purpose:'favicon'
     },
     {
-      src:'/android-chrome-512x512.png',
+      src:'/android-launchericon-512-512.png',
       sizes:'512x512',
       type:'image/png',
       purpose:'favicon'
@@ -25,7 +25,7 @@ const manifestForPlugIn = {
       purpose:'apple touch icon',
     },
     {
-      src: '/maskable_icon.png',
+      src: '/android-launchericon-512-512.png',
       sizes:'512x512',
       type:'image/png',
       purpose:'any maskable',
