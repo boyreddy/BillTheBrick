@@ -41,7 +41,7 @@ const Home = () => {
   }, [year, month, site]);
 
   return !invoice ? (
-    <div className="mx-auto bg-amber-50 min-w-screen min-h-screen justify-items-center">
+    <div className="mx-auto min-w-screen min-h-screen justify-items-center">
       <Navbar
         year={year}
         month={month}

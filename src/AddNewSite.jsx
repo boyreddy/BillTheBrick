@@ -7,7 +7,7 @@ const AddNewSite = () => {
   const sites = localStorage.getItem("sites");
   const [site, setSite] = useState("");
   return (
-    <div className="flex flex-col bg-amber-50 min-w-screen min-h-screen justify-center">
+    <div className="flex flex-col min-h-screen justify-center">
       <h1 className="font-bold text-center">Add New Site</h1>
       <form
         action=""
@@ -20,7 +20,7 @@ const AddNewSite = () => {
           toast.success("Site Added");
           window.location.reload();
         }}
-        className="w-100 flex mx-auto mt-2 p-1 border justify-between"
+        className="w-100 flex flex-col mx-auto mt-2 p-1 border justify-between"
       >
         <input
           type="text"
@@ -45,7 +45,7 @@ const AddNewSite = () => {
       >
         Return to Home
       </Link>
-      <div className="w-100 mt-3 m-1 mx-auto">Sites Available: {sites}</div>
+      <div className="w-100 ml-2 mt-3 m-1 mx-auto">Sites Available: {sites}</div>
     </div>
   );
 };

@@ -120,7 +120,7 @@ const Invoice = ({ site, year, month, second, rate, setRate }) => {
       : 30;
 
   return (
-    <div className="w-100 pt-3">
+    <div className="w-100 justify-center justify-items-center pt-3">
       <h1 className="font-bold" onClick={()=>window.location.reload()}>KSR Manpower Supply</h1>
       <h1>Invoice</h1>
       <h1>
@@ -170,7 +170,7 @@ const Invoice = ({ site, year, month, second, rate, setRate }) => {
       <p className="mt-1">
         Rate per Pallet:{" "}
         <input
-          className="rounded px-1 mt-1"
+          className="rounded px-1 mt-1 w-15"
           type="number"
           value={rate}
           onChange={(e) => setRate(e.target.value)}

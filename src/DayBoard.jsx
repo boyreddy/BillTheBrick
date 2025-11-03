@@ -22,7 +22,7 @@ const DayBoard = ({ site, year, month, lastDay }) => {
   }, []);
 
   return (
-    <div className="flex flex-row flex-wrap mx-auto w-100">
+    <div className="flex flex-row flex-wrap mx-auto w-100 justify-center">
       {records.map((k, ind) => (
         <DayIcon site={site} year={year} month={month} setView={setView} key={k+ind} day={ind + 1} qty={k} isOpen={open} handleOpen={handleOpen} onClose={handleClose} />
       ))}

@@ -4,7 +4,7 @@ const Navbar = ({ year, site, month, setYear, setMonth, setSite }) => {
     <>
       <h1 className="font-bold pt-3">KSR BillTheBrick</h1>
       <hr />
-      <div className="justify-between flex w-100">
+      <div className="justify-between flex w-100 mx-auto">
         <div className="flex justify-items-center bg-amber-100">
           {/* <span>Site:</span> */}
           <select
