@@ -13,6 +13,23 @@ function App() {
   const [invoice, setInvoice] = useState(false);
   const [second, setSecond] = useState(false);
 
+  const isLeapYear = year % 4 == 0;
+
+  const lastDay =
+      month == "Jan" ||
+      month == "Mar" ||
+      month == "May" ||
+      month == "Jul" ||
+      month == "Aug" ||
+      month == "Oct" ||
+      month == "Dec"
+        ? 31
+        : month == "Feb"
+        ? isLeapYear
+          ? 29
+          : 28
+        : 30;
+
   useEffect(() => {
     if (year === null) localStorage.setItem("year", Date().substring(11, 15));
     if (month === null) localStorage.setItem("month", Date().substring(4, 7));
@@ -29,13 +46,13 @@ function App() {
         setMonth={setMonth}
         setSite={setSite}
       />
-      <DayBoard year={year} month={month} site={site} />
+      <DayBoard year={year} month={month} site={site} lastDay={lastDay} />
       <hr />
       <MonthTotal year={year} month={month} site={site} />
       <hr />
       <div className="flex justify-between mt-2">
         <button
-          className="p-1 rounded bg-amber-50"
+          className="p-1 rounded bg-amber-200"
           onClick={() => {
             setSecond(!second);
           }}

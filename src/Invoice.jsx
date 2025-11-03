@@ -102,12 +102,35 @@ const Invoice = ({ site, year, month, second }) => {
     0
   );
 
+  const isLeapYear = year % 4 == 0;
+
+  const lastDay =
+    month == "Jan" ||
+    month == "Mar" ||
+    month == "May" ||
+    month == "Jul" ||
+    month == "Aug" ||
+    month == "Oct" ||
+    month == "Dec"
+      ? 31
+      : month == "Feb"
+      ? isLeapYear
+        ? 29
+        : 28
+      : 30;
+
   return (
     <div className="w-90 ml-26 mx-auto">
       <h1 className="font-bold">KSR Manpower Supply</h1>
       <h1>Invoice</h1>
       <h1>
-        {site} - {year} - {month}
+        {site} - {month} - {year}
+      </h1>
+      <h1>
+        Period:{" "}
+        {!second
+          ? "1 " + month + " " + year + " to " + "15 " + month + " " + year
+          : "16 " + month + " " + year + " to " + lastDay+" "+ month + " " + year}
       </h1>
       <div>
         <table className="border">

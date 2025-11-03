@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import DayIcon from "./DayIcon";
 import DayEdit from "./DayEdit";
 
-const DayBoard = ({ site, year, month }) => {
-  const [records, setRecords] = useState(new Array(31).fill(0));
+const DayBoard = ({ site, year, month, lastDay }) => {
+  const [records, setRecords] = useState(new Array(lastDay).fill(0));
   const [open, setOpen] = useState(false);
 
   const [view, setView] = useState(site+year+month+1)

@@ -30,7 +30,7 @@ const DayEdit = ({ isOpen, onClose, view, children }) => {
       <div
         style={{
           background: "white",
-          height: 150,
+          // height: 150,
           width: 240,
           margin: "auto",
           padding: "2%",
@@ -58,6 +58,10 @@ const DayEdit = ({ isOpen, onClose, view, children }) => {
             autoFocus={true}
           />
         </p>
+        <button className="rounded bg-red-400 p-1 m-1" onClick={()=>{
+          localStorage.removeItem(view)
+          onClose()
+        }}>Delete Entry</button>
       </div>
     </div>
   );
